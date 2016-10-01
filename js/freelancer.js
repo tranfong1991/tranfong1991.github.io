@@ -35,3 +35,141 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+var $FRONT_END_SKILLS = [['Skill', 'Proficiency'], ['JavaScript', 70], ['HTML', 60], ['CSS', 55], ['jQuery', 65], ['AngularJS', 70]];
+
+var $BACK_END_SKILLS = [['Skill', 'Proficiency'], ['Java', 85], ['C++', 85], ['Python', 65], ['SQL', 55], ['Ruby', 50], ['MySQL', 50], ['MongoDB', 80], ['PostgreSQL', 50]];
+
+var $SOFTWARE_SKILLS = [['Skill', 'Proficiency'], ['Visual Studio', 70], ['Linux', 50], ['Git', 85], ['Emacs', 90], ['Eclipse', 70], ['Android Studio',80], ['IntelliJ', 75]];
+
+var $PHILLIPS66 = {
+    'img':'img/phillips66.jpg', 
+    'title':'IT Intern', 
+    'location': 'Bartlesville, Oklahoma',
+    'date': 'May - August 2014',
+    'group':'Data Integration & B2B', 
+    'description':'I had two projects in this internship. The first one was to use Informatica PowerCenter, a data integration tool, ' + 
+	'to create two data files that expedite cross referencing information. In my second project, ' + 
+	'I collaborated with the Information Management group to populate a new database that facilitates the Record Management process.'
+};
+
+var $CISCO = {
+    'img':'img/cisco.png', 
+    'title':'Software Engineering Intern', 
+    'location': 'San Jose, California',
+    'date': 'May - August 2015',
+    'group':'Collaboration Technology', 
+    'description':'I had two projects in this internship. The first one was to design and implement a phone viewer web application that gives ' + 
+	'a snapshot of all VoIP phone statuses. The second project was to design and implement a test report web application that ' + 
+	'shows statuses of phone tests. Data is stored in PostgreSQL and Redis databases. I used HTML, CSS, JavaScript, jQuery for front end and Python Flask framework for back end.'};
+
+var $TAMU = {
+    'img':'img/tamu.png', 
+    'title':'Peer Teacher',
+    'location': 'College Station, Texas',
+    'date': 'August 2015 - May 2016',
+    'group':'Computer Science & Engineering Department', 
+    'description':'I tutored CSCE 313, an introductory class in computer systems, and CSCE 221, data structures and algorithms. I helped students debug and come up with algorithms to solve low-level system problems such as memory allocation, thread utilization, socket programming, etc.'};
+
+var $CAPITALONE = {
+    'img':'img/capitalone.png',
+    'title':'Software Engineer',
+    'location':'Plano, Texas',
+    'date': 'July 2016 - Present',
+    'group': 'Auto Finance',
+    'description': 'I am currently implementing the new auto loan pre-approval website using AngularJS, Spring Boot, and PostgreSQL.'
+};
+
+var $SIMPLE_SALE = {
+    'img':'img/simple-sale-logo-512.jpg',
+    'name': 'Simple Sale',
+    'description': 'An Android and web application that generates QR code to make payment for sale items. Perfect for garage sale.',
+    'url': 'http://still-depths-76372.herokuapp.com/'
+};
+
+var $DEAR_DIARY = {
+    'img':'img/dear-diary-promo-graphic.png',
+    'name': 'Dear Diary',
+    'description': 'A simple web application for writing diary.',
+    'url': 'http://immense-gorge-62944.herokuapp.com/'
+};
+
+$(document).ready(function(){
+    $('.col-animate').fadeIn(1500);
+
+    drawChart('front-end-pie', $FRONT_END_SKILLS, 'Front End');
+    drawChart('back-end-pie', $BACK_END_SKILLS, 'Back End');
+    drawChart('software-pie', $SOFTWARE_SKILLS, 'Software');
+});
+
+function openInNewPage(url){
+    window.open(url);
+}
+
+function drawChart(id, dataList, pieTitle) {
+    var data = google.visualization.arrayToDataTable(dataList);
+    var options = {
+        pieHole: 0.5,
+        pieSliceText:'label',
+        legend:'none',
+        title: pieTitle,
+        titleTextStyle:{
+            fontSize:20
+        },
+        tooltip:{
+            text:'percentage'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById(id));
+    chart.draw(data, options);
+}
+
+function populateJobModal(company){
+    switch(company){
+    case 'phillips66': 
+	makeJobModal($PHILLIPS66);
+	break;
+    case 'cisco':
+	makeJobModal($CISCO);
+	break;
+    case 'tamu':
+	makeJobModal($TAMU);
+	break;
+    case 'capitalone':
+	makeJobModal($CAPITALONE);
+	break;
+    }
+
+    return false;
+}
+
+function makeJobModal(jobInfo){
+    $('#job-image').attr('src', jobInfo.img);
+    $('#job-title').text(jobInfo.title);
+    $('#job-location').text(jobInfo.location);
+    $('#job-date').text(jobInfo.date);
+    $('#job-group').text(jobInfo.group);
+    $('#job-description').text(jobInfo.description);
+}
+
+function populateProjectModal(project){
+    switch(project){
+    case "simplesale":
+	makeProjectModal($SIMPLE_SALE);
+	break;
+    case "deardiary":
+	makeProjectModal($DEAR_DIARY);
+    default:
+	break;
+    }
+
+    return false;
+}
+
+function makeProjectModal(projectInfo){
+    $('#project-image').attr('src', projectInfo.img);
+    $('#project-name').text(projectInfo.name);
+    $('#project-description').text(projectInfo.description);
+    $('#project-link').attr('href', projectInfo.url);
+}
