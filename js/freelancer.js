@@ -43,32 +43,32 @@ var $BACK_END_SKILLS = [['Skill', 'Proficiency'], ['Java', 85], ['C++', 85], ['P
 var $SOFTWARE_SKILLS = [['Skill', 'Proficiency'], ['Visual Studio', 70], ['Linux', 50], ['Git', 85], ['Emacs', 90], ['Eclipse', 70], ['Android Studio',80], ['IntelliJ', 75]];
 
 var $PHILLIPS66 = {
-    'img':'img/phillips66.jpg', 
-    'title':'IT Intern', 
+    'img':'img/phillips66.jpg',
+    'title':'IT Intern',
     'location': 'Bartlesville, Oklahoma',
     'date': 'May - August 2014',
-    'group':'Data Integration & B2B', 
-    'description':'I had two projects in this internship. The first one was to use Informatica PowerCenter, a data integration tool, ' + 
-	'to create two data files that expedite cross referencing information. In my second project, ' + 
+    'group':'Data Integration & B2B',
+    'description':'I had two projects in this internship. The first one was to use Informatica PowerCenter, a data integration tool, ' +
+	'to create two data files that expedite cross referencing information. In my second project, ' +
 	'I collaborated with the Information Management group to populate a new database that facilitates the Record Management process.'
 };
 
 var $CISCO = {
-    'img':'img/cisco.png', 
-    'title':'Software Engineering Intern', 
+    'img':'img/cisco.png',
+    'title':'Software Engineering Intern',
     'location': 'San Jose, California',
     'date': 'May - August 2015',
-    'group':'Collaboration Technology', 
-    'description':'I had two projects in this internship. The first one was to design and implement a phone viewer web application that gives ' + 
-	'a snapshot of all VoIP phone statuses. The second project was to design and implement a test report web application that ' + 
+    'group':'Collaboration Technology',
+    'description':'I had two projects in this internship. The first one was to design and implement a phone viewer web application that gives ' +
+	'a snapshot of all VoIP phone statuses. The second project was to design and implement a test report web application that ' +
 	'shows statuses of phone tests. Data is stored in PostgreSQL and Redis databases. I used HTML, CSS, JavaScript, jQuery for front end and Python Flask framework for back end.'};
 
 var $TAMU = {
-    'img':'img/tamu.png', 
+    'img':'img/tamu.png',
     'title':'Peer Teacher',
     'location': 'College Station, Texas',
     'date': 'August 2015 - May 2016',
-    'group':'Computer Science & Engineering Department', 
+    'group':'Computer Science & Engineering Department',
     'description':'I tutored CSCE 313, an introductory class in computer systems, and CSCE 221, data structures and algorithms. I helped students debug and come up with algorithms to solve low-level system problems such as memory allocation, thread utilization, socket programming, etc.'};
 
 var $CAPITALONE = {
@@ -84,14 +84,14 @@ var $SIMPLE_SALE = {
     'img':'img/simple-sale-logo-512.jpg',
     'name': 'Simple Sale',
     'description': 'An Android and web application that generates QR code to make payment for sale items. Perfect for garage sale.',
-    'url': 'http://still-depths-76372.herokuapp.com/'
+    'url': 'http://simplesale.herokuapp.com/'
 };
 
 var $DEAR_DIARY = {
     'img':'img/dear-diary-promo-graphic.png',
     'name': 'Dear Diary',
     'description': 'A simple web application for writing diary.',
-    'url': 'http://immense-gorge-62944.herokuapp.com/'
+    'url': 'http://deardiary-2016.herokuapp.com/'
 };
 
 $(document).ready(function(){
@@ -127,7 +127,7 @@ function drawChart(id, dataList, pieTitle) {
 
 function populateJobModal(company){
     switch(company){
-    case 'phillips66': 
+    case 'phillips66':
 	makeJobModal($PHILLIPS66);
 	break;
     case 'cisco':
