@@ -77,7 +77,7 @@ var $CAPITALONE = {
     'location':'Plano, Texas',
     'date': 'July 2016 - Present',
     'group': 'Auto Finance',
-    'description': 'I am currently implementing the new auto loan pre-approval website using AngularJS, Spring Boot, and PostgreSQL.'
+    'description': 'I recently finished implementing from scratch the latest Auto Loan Pre-approval website using AngularJS, Spring Boot, and PostgreSQL. I implemented several API services and worked heavily on wiring the front-end with the back-end. Please check out my work here at autopreapproval.capitalone.com'
 };
 
 var $SIMPLE_SALE = {
@@ -92,6 +92,13 @@ var $DEAR_DIARY = {
     'name': 'Dear Diary',
     'description': 'A simple web application for writing diary.',
     'url': 'http://deardiary-2016.herokuapp.com/'
+};
+
+var $AUTO_PREAPPROVAL = {
+    'img':'img/pa-promo-graphic.png',
+    'name': 'Capital One Auto Loan Pre-approval Website',
+    'description': "Customers who are pre-approved for an auto loan can sign in to this website, view dealers' inventory, save favorite cars, and register for a sale event.",
+    'url': 'https://autopreapproval.capitalone.com'
 };
 
 $(document).ready(function(){
@@ -155,13 +162,17 @@ function makeJobModal(jobInfo){
 
 function populateProjectModal(project){
     switch(project){
-    case "simplesale":
-	makeProjectModal($SIMPLE_SALE);
-	break;
-    case "deardiary":
-	makeProjectModal($DEAR_DIARY);
-    default:
-	break;
+        case "simplesale":
+        	makeProjectModal($SIMPLE_SALE);
+        	break;
+        case "deardiary":
+        	makeProjectModal($DEAR_DIARY);
+            break;
+        case "autopreapproval":
+            makeProjectModal($AUTO_PREAPPROVAL);
+            break;
+        default:
+            break;
     }
 
     return false;
