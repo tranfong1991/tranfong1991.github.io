@@ -36,9 +36,9 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-var $FRONT_END_SKILLS = [['Skill', 'Proficiency'], ['JavaScript', 70], ['HTML', 60], ['CSS', 55], ['jQuery', 65], ['AngularJS', 70]];
+var $FRONT_END_SKILLS = [['Skill', 'Proficiency'], ['JavaScript', 70], ['HTML', 60], ['CSS/SCSS', 55], ['jQuery', 65], ['Angular 5', 70]];
 
-var $BACK_END_SKILLS = [['Skill', 'Proficiency'], ['Java', 85], ['C++', 85], ['Python', 65], ['SQL', 55], ['Ruby', 50], ['MySQL', 50], ['MongoDB', 80], ['PostgreSQL', 50]];
+var $BACK_END_SKILLS = [['Skill', 'Proficiency'], ['Java', 85], ['C++', 85], ['Python', 65], ['SQL', 55], ['MySQL', 50], ['MongoDB', 80], ['PostgreSQL', 50]];
 
 var $SOFTWARE_SKILLS = [['Skill', 'Proficiency'], ['Visual Studio', 70], ['Linux', 50], ['Git', 85], ['Emacs', 90], ['Eclipse', 70], ['Android Studio',80], ['IntelliJ', 75]];
 
@@ -77,7 +77,9 @@ var $CAPITALONE = {
     'location':'Plano, Texas',
     'date': 'July 2016 - Present',
     'group': 'Auto Finance',
-    'description': 'I recently finished implementing from scratch the latest Auto Loan Pre-approval website using AngularJS, Spring Boot, and PostgreSQL. I implemented several API services and worked heavily on wiring the front-end with the back-end. Please check out my work here at autopreapproval.capitalone.com'
+    'description': 'Promoted to senior associate level after one year. I collaborate with product managers to design the best user experience. ' + 
+     'I heavily contribute to architecting and implementing RESTful APIs, highly reusable Angular UI components for two web applications, and utilize graph algorithms to solve organization hierarchy problems. ' +
+     'I also mentor other associate engineers in coming up with algorithms to solve business problems.'
 };
 
 var $SIMPLE_SALE = {

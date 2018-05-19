@@ -95,7 +95,7 @@ header {
 header .container {
     width: 100%;
     background-size: cover;
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/blurred-bg.jpg');
 }
 
 header img {
