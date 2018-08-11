@@ -82,6 +82,15 @@ var $CAPITALONE = {
      'I also mentor other associate engineers in coming up with algorithms to solve business problems.'
 };
 
+var $GOOGLE = {
+    'img': 'img/google.jpg',
+    'title': 'Incoming Software Engineer',
+    'location': 'San Bruno, California',
+    'date': 'September 2018',
+    'group': 'YouTube Music',
+    'description': ''
+};
+
 var $SIMPLE_SALE = {
     'img':'img/simple-sale-logo-512.jpg',
     'name': 'Simple Sale',
@@ -137,17 +146,20 @@ function drawChart(id, dataList, pieTitle) {
 function populateJobModal(company){
     switch(company){
     case 'phillips66':
-	makeJobModal($PHILLIPS66);
-	break;
+    	makeJobModal($PHILLIPS66);
+    	break;
     case 'cisco':
-	makeJobModal($CISCO);
-	break;
+    	makeJobModal($CISCO);
+    	break;
     case 'tamu':
-	makeJobModal($TAMU);
-	break;
+    	makeJobModal($TAMU);
+    	break;
     case 'capitalone':
-	makeJobModal($CAPITALONE);
-	break;
+    	makeJobModal($CAPITALONE);
+    	break;
+    case 'google':
+        makeJobModal($GOOGLE);
+        break;
     }
 
     return false;
