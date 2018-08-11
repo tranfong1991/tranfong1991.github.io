@@ -75,11 +75,11 @@ var $CAPITALONE = {
     'img':'img/capitalone.png',
     'title':'Software Engineer',
     'location':'Plano, Texas',
-    'date': 'July 2016 - Present',
+    'date': 'July 2016 - August 2018',
     'group': 'Auto Finance and SLQ2CQ',
-    'description': 'Promoted to senior associate level after one year. I collaborate with product managers to design the best user experience. ' + 
-     'I heavily contribute to architecting and implementing RESTful APIs, highly reusable Angular UI components for two web applications, and utilize graph algorithms to solve organization hierarchy problems. ' +
-     'I also mentor other associate engineers in coming up with algorithms to solve business problems.'
+    'description': 'Promoted to senior associate level after one year. I collaborated with product managers to design the best user experience. ' + 
+     'I heavily contributed to architecting and implementing RESTful APIs, highly reusable Angular UI components for two web applications, and utilized graph algorithms to solve organization hierarchy problems. ' +
+     'I also mentored other associate engineers in coming up with algorithms to solve business problems.'
 };
 
 var $GOOGLE = {
