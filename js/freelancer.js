@@ -84,9 +84,9 @@ var $CAPITALONE = {
 
 var $GOOGLE = {
     'img': 'img/google.jpg',
-    'title': 'Incoming Software Engineer',
+    'title': 'Software Engineer',
     'location': 'San Bruno, California',
-    'date': 'September 2018',
+    'date': 'September 2018 - Present',
     'group': 'YouTube Music',
     'description': ''
 };
